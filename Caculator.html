@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      function appendToDisplay(value) {
+        document.getElementById("resultNumber").value += value;
+      }
+
+      function clearDisplay() {
+        document.getElementById("resultNumber").value = "";
+      }
+
+      function calculate() {
+        try {
+          var result = eval(document.getElementById("resultNumber").value);
+          document.getElementById("resultNumber").value = result;
+        } catch (error) {
+          document.getElementById("resultNumber").value = "Error";
+        }
+      }
+    </script>
+    <style>
+      .number {
+        height: 50px;
+        width: 466px;
+        margin-top: 16px;
+        margin-left: 16px;
+        background-color: whitesmoke;
+        color: black;
+        border: none;
+      }
+
+      .button {
+        width: 103px;
+        height: 67px;
+        background-color: white;
+        color: black;
+        margin-left: 16px;
+        margin-top: 16px;
+        border: none;
+      }
+
+      .casing {
+        position: relative;
+        margin-left: 34%;
+        margin-top: 8%;
+        width: 500px;
+        height: 500px;
+        background-color: gray;
+        border-radius: 10px;
+      }
+    </style>
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+    <div class="casing">
+      <input class="number" type="text" id="resultNumber" readonly />
+      <input
+        class="button"
+        type="button"
+        onClick="appendToDisplay('1')"
+        value="1"
+      />
+      <input
+        class="button"
+        type="button"
+        onClick="appendToDisplay('2')"
+        value="2"
+      />
+      <input
+        class="button"
+        type="button"
+        onClick="appendToDisplay('3')"
+        value="3"
+      />
+      <input
+        class="button"
+        type="button"
+        onClick="appendToDisplay('+')"
+        value="+"
+      />
+
+      <input
+        class="button"
+        type="button"
+        onClick="appendToDisplay('4')"
+        value="4"
+      />
+      <input
+        class="button"
+        type="button"
+        onClick="appendToDisplay('5')"
+        value="5"
+      />
+      <input
+        class="button"
+        type="button"
+        onClick="appendToDisplay('6')"
+        value="6"
+      />
+      <input
+        class="button"
+        type="button"
+        onClick="appendToDisplay('-')"
+        value="-"
+      />
+
+      <input
+        class="button"
+        type="button"
+        onClick="appendToDisplay('7')"
+        value="7"
+      />
+      <input
+        class="button"
+        type="button"
+        onClick="appendToDisplay('8')"
+        value="8"
+      />
+      <input
+        class="button"
+        type="button"
+        onClick="appendToDisplay('9')"
+        value="9"
+      />
+      <input
+        class="button"
+        type="button"
+        onClick="appendToDisplay('*')"
+        value="*"
+      />
+
+      <input
+        class="button"
+        type="button"
+        onClick="clearDisplay('C')"
+        value="C"
+      />
+      <input
+        class="button"
+        type="button"
+        onClick="appendToDisplay('0')"
+        value="0"
+      />
+      <input class="button" type="button" onClick="calculate('=')" value="=" />
+      <input
+        class="button"
+        type="button"
+        onClick="appendToDisplay('/')"
+        value="/"
+      />
+
+      <input
+        class="button"
+        type="button"
+        onClick="appendToDisplay('%')"
+        value="%"
+      />
+      <input
+        class="button"
+        type="button"
+        onClick="appendToDisplay('**')"
+        value="**"
+      />
+      <input
+        class="button"
+        type="button"
+        onClick="appendToDisplay('<')"
+        value="<"
+      />
+      <input
+        class="button"
+        type="button"
+        onClick="appendToDisplay('>')"
+        value=">"
+      />
+    </div>
+  </body>
+</html>
